@@ -14,7 +14,7 @@ class Actor(models.Model):
     name = models.CharField(max_length=200)
     age = models.IntegerField()
     genre = models.ForeignKey(
-        Genre, on_delete=models.PROTECT, default=1, related_name="genre_actor"
+        Genre, on_delete=models.PROTECT, related_name="genre_actor"
     )
     nationality = models.CharField(
         max_length=100, choices=NATIONALITY_CHOICES, blank=True, null=True
