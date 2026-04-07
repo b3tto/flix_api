@@ -38,7 +38,7 @@ class MovieListDetailSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Movie
-        fields = ["id", "title", "genre", "actors", "release_date", "rate", "resume"]
+        fields = ["id", "title", "genre", "release_date", "actors", "rate", "resume"]
 
     # Calculando a média de reviews do filme.
     def get_rate(self, obj):
